@@ -1,0 +1,77 @@
+﻿@model IEnumerable<rickar.NotasEstudiante>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Labouno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Labodos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Labotres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parcialuno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parcialdos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parcialtres)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Labouno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Labodos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Labotres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parcialuno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parcialdos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parcialtres)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.IdNota }) |
+                @Html.ActionLink("Details", "Details", new { id=item.IdNota }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.IdNota })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
