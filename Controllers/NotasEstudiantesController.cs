@@ -14,13 +14,13 @@ namespace rickar.Controllers
     {
         private NotasRickarEntities db = new NotasRickarEntities();
 
-        // GET: NotasEstudiantes
+      
         public ActionResult Index()
         {
             return View(db.NotasEstudiante.ToList());
         }
 
-        // GET: NotasEstudiantes/Details/5
+    
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,15 +35,11 @@ namespace rickar.Controllers
             return View(notasEstudiante);
         }
 
-        // GET: NotasEstudiantes/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: NotasEstudiantes/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "IdNota,Nombre,Labouno,Labodos,Labotres,parcialuno,parcialdos,parcialtres")] NotasEstudiante notasEstudiante)
@@ -58,7 +54,6 @@ namespace rickar.Controllers
             return View(notasEstudiante);
         }
 
-        // GET: NotasEstudiantes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,9 +68,7 @@ namespace rickar.Controllers
             return View(notasEstudiante);
         }
 
-        // POST: NotasEstudiantes/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "IdNota,Nombre,Labouno,Labodos,Labotres,parcialuno,parcialdos,parcialtres")] NotasEstudiante notasEstudiante)
@@ -89,7 +82,6 @@ namespace rickar.Controllers
             return View(notasEstudiante);
         }
 
-        // GET: NotasEstudiantes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +96,6 @@ namespace rickar.Controllers
             return View(notasEstudiante);
         }
 
-        // POST: NotasEstudiantes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

@@ -207,9 +207,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\NotasEstudiantes\Create.cshtml" />
-    <Content Include="Views\NotasEstudiantes\Delete.cshtml" />
-    <Content Include="Views\NotasEstudiantes\Details.cshtml" />
-    <Content Include="Views\NotasEstudiantes\Edit.cshtml" />
     <Content Include="Views\NotasEstudiantes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
